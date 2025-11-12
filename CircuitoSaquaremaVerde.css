@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #93bdb3;
+    color: #628474;
+}
+
+
+header {
+    background: #f3f4ed;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky; /* Faz o menu "grudar" no topo ao rolar */
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 250px; 
+    width: auto; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav ul {
+    max-width: 1100px; 
+    margin: 0 auto;   
+    padding: 0 10px;
+    justify-content: space-evenly; 
+    align-items: center;
+    list-style: none; 
+    display: flex;
+}
+
+#login1 {
+    background-color: #628474;
+    border-radius: 1rem;
+    border: 1px solid;
+    display: inline-block;
+    padding: 5px 10px;
+    color:white;
+
+}
+
+#login1:hover {
+    background-color: #93bdb3;
+}
+
+header nav ul li {
+    margin-left: 25px; 
+}
+
+header nav ul li a {
+    text-decoration: none; 
+    color: #216d52;    
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+main {
+    padding: 2rem 0; 
+}
+
+.apresentacao {
+    text-align: center;
+}
+
+.apresentacao h1 {
+    color:#ffffff;
+    font-size: 45px;
+}
+
+.apresentacao p {
+    color:#f3f4ed;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.trilhas {
+    background: #ffffff;
+    margin: 0 auto 2rem auto; 
+    padding: 2rem;
+    max-width: 1100px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    /* Grid responsivo:
+       - Tenta criar colunas de no mínimo 300px.
+       - 'auto-fit' preenche o espaço disponível com quantas colunas couberem.
+       - '1fr' faz as colunas crescerem igualmente para preencher o espaço.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* Espaço entre os cards */
+
+}
+
+.trilhas h2 {
+    grid-column: 1 / -1;
+    font-size: 25px;
+    }
+
+.trilhas h3 {
+    padding: 5px;
+}
+
+.trilhas article {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trilhas article:hover{
+    transform: translateY(-5px); /* Efeito de "levantar" o card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventos {
+    background: #ffffff;
+    margin: 0 auto 2rem auto; /* Centraliza, com 2rem de espaço abaixo */
+    padding: 2rem;
+    max-width: 1100px;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* Espaço entre os cards */
+}
+
+.eventos h2 {
+    grid-column: 1 / -1;
+    font-size: 25px;
+}
+
+.eventos h3 {
+    padding: 5px;
+}
+
+.eventos article {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventos article:hover{
+    transform: translateY(-5px); /* Efeito de "levantar" o card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    color: #628474;
+}
+
+.gastronomia {
+    background: #ffffff;
+    margin: 0 auto 2rem auto; /* Centraliza, com 2rem de espaço abaixo */
+    padding: 2rem;
+    max-width: 1100px;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    /* Grid responsivo:
+       - Tenta criar colunas de no mínimo 300px.
+       - 'auto-fit' preenche o espaço disponível com quantas colunas couberem.
+       - '1fr' faz as colunas crescerem igualmente para preencher o espaço.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* Espaço entre os cards */
+}
+
+.gastronomia article {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gastronomia article:hover{
+    transform: translateY(-5px); /* Efeito de "levantar" o card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gastronomia h2 {
+    grid-column: 1 / -1;
+}
+
+
+
+footer {
+    background: #f3f4ed;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    color: #628474;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #628474;
+    font-weight: bold;
+}
