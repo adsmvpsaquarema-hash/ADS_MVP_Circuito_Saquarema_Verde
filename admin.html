@@ -30,7 +30,7 @@
                 <ul>
                     <li>Datas: 15 a 18 de Novembro de 2025</li>
                     <li>Local: Centro de Desenvolvimento do Voleibol (CDV), Saquarema, RJ</li>
-                    <li>Categorias: 40+, 50+, 59+ e 63+ (masculino e feminino)</li>                    
+                    <li>Horário: 08h as 19hs.</li>                     
                 </ul>
                 <br>
                 <p>Mais informações: https://wp.cbv.com.br/master-saquarema</p>
@@ -61,17 +61,43 @@
         </div>
 
         <div id="novos-eventos">
-            <form>
-                    <h2>Adicionar Novo Evento</h2>
-                    <input type="text" placeholder="Nome do Evento">
-                    <input type="text" placeholder="Local">
-                    <input type="time" placeholder="Hora">
-                    <input type="date" placeholder="Data">
-                    <textarea placeholder="Descrição"></textarea>
-                    <button type="submit">Adicionar Evento</button>
+            <form id="form-novo-evento">
+                    <h2>Substituir Evento</h2>
+                    
+                    <label for="evento-slot">Substituir qual evento?</label>
+                    <select id="evento-slot" required>
+                        <option value="" disabled selected>-- Escolha um slot de evento --</option>
+                        <option value="evento1">Evento 1 (Vôlei Master)</option>
+                        <option value="evento2">Evento 2 (FLIS)</option>
+                        <option value="evento3">Evento 3 (Natal de Luz)</option>
+                    </select>
+
+                    <label for="evento-nome">Nome do Evento</label>
+                    <input type="text" id="evento-nome" placeholder="Nome do Evento" required>
+                    
+                    
+                    <label for="evento-data">Datas</label>
+                    <input type="text" id="evento-data" placeholder="Ex: 15 a 18 de Novembro de 2025" required>
+                    
+                    <label for="evento-local">Local</label>
+                    <input type="text" id="evento-local" placeholder="Ex: Praça do Canhão, Saquarema, RJ" required>
+                    
+                    <label for="evento-horario">Horário</label>
+                    <input type="text" id="evento-horario" placeholder="Ex: 09h as 21hs" required>
+                    
+                    <label for="evento-link">Link (Mais Informações)</label>
+                    <input type="text" id="evento-link" placeholder="https://site.com.br" required>
+                    
+                    <button type="submit">Salvar e Substituir Evento</button>
             </form>
+            <div id="confirmation-message">
+                Evento salvo com sucesso! A mudança será visível na página principal.
+            </div>
         </div>
     </main>
+
+
+    <script src="AtualizarAdmin.js"></script>
 
 </body>
 </html>
