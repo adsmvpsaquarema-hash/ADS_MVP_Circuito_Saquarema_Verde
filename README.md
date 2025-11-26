@@ -26,14 +26,9 @@ O MVP consiste em um website informativo chamado **Saquarema Verde Online**, des
 
 1. Clone ou baixe o repositório:
 git clone https://github.com/adsmvpsaquarema-hash/ADS_MVP_Circuito_Saquarema_Verde
-
-markdown
-Sempre exibir os detalhes
-
-Copiar código
 2. Abra no VS Code  
 3. Adicione a Extensão
-4. Execute o arquivo `index.html` com Live Server ou diretamente no navegador.
+4. Execute o arquivo `CircuitoSaquaremaVerde.html` com Live Server ou diretamente no navegador.
 
 ## 🔐 Área do Administrador
 - Permite cadastrar eventos
