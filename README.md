@@ -19,7 +19,7 @@ O MVP consiste em um website informativo chamado **Saquarema Verde Online**, des
 - Interface intuitiva e responsiva  
 - Informações sobre atrações naturais  
 - Sessão de eventos e atualizações  
-- Login para administradores  
+- Login para administradores (Login: admin / senha: admin)
 - Dicas e conteúdos educativos  
 
 ## 🖥️ Como Executar o Projeto Localmente  
@@ -33,7 +33,7 @@ Sempre exibir os detalhes
 Copiar código
 2. Abra no VS Code  
 3. Adicione a Extensão
-4. Execute o arquivo `index.html` com Live Server ou diretamente no navegador.
+4. Execute o arquivo `CircuitoSaquaremaVerde.html` com Live Server ou diretamente no navegador.
 
 ## 🔐 Área do Administrador
 - Permite cadastrar eventos
