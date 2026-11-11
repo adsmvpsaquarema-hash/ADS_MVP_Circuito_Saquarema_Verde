@@ -1,33 +1,40 @@
+version: '3.8'
+
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: saquarema-verde-app
+  web:
+    build: .                 
+    restart: unless-stopped
+    ports:
+      - "3000:3000"        
+    depends_on:
+      db:
+        condition: service_healthy  
+    environment:
+     
+      POSTGRES_DB: ${POSTGRES_DB:-circuito_saquarema}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
+      POSTGRES_HOST: db      
+      POSTGRES_PORT: 5432
+      # Se você usar Os como Prisma, TypeORM ou Sequelize no Node, descomente a linha abaixo:
+      # DATABASE_URL: postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-change-me}@db:5432/${POSTGRES_DB:-circuito_saquarema}
+
+  db:
+    image: postgres:16-alpine
     restart: unless-stopped
     environment:
-      PORTA: 3000
-      DB_PATH: /app/data/saquarema.db
-      JWT_SECRET: ${JWT_SECRET:-saquarema-verde-mvp-secret-2026}
-      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-8h}
-      ADMIN_SENHA: ${ADMIN_SENHA:-Admin@123}
-      CORS_ORIGIN: ${CORS_ORIGIN:-}
+      POSTGRES_DB: ${POSTGRES_DB:-circuito_saquarema}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
     ports:
-      - "${PORTA:-3000}:3000"
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
-      - saquarema_data:/app/data
+      - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test:
-        [
-          "CMD",
-          "node",
-          "-e",
-          "fetch('http://127.0.0.1:3000/api/saude').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"
-        ]
-      interval: 15s
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
       timeout: 5s
-      retries: 3
-      start_period: 10s
+      retries: 5
 
 volumes:
-  saquarema_data:
+  postgres_data:
