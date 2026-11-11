@@ -1,165 +1,136 @@
-# Inicio da sprint : 
-●     Dados dos integrantes da equipe.
-●     Escolha da situação-problema.
-●     Descrição sucinta do MVP.
-●     Instruções para executar o MVP localmente (caso necessário).
-●     Qualquer informação adicional relevante.
+# 🌿 Saquarema Verde Online
 
+Plataforma digital informativa sobre ecoturismo, biodiversidade, eventos, gastronomia e experiências da comunidade no município de Saquarema — **Situação-Problema #3: Circuito Saquarema Verde**.
 
-O código deve estar organizado em pastas, no mínimo uma para o código-fonte, comumente chamada de “src”, uma para exemplos de uso e testes chamada “test”, caso utilize dados uma chamada data (data em inglês significa dados enquanto data como em dia mês e ano é date) e outras que julgar necessário, isto não é uma regra, porém é importante que o projeto esteja bem organizado.
+## 👥 Integrantes da Equipe
+| Nome | Matrícula | Curso/Turma |
+|------|-----------|-------------|
+| JOSE CESAR MEDEIROS GOMES | 06012011 | Análise e Desenvolvimento de Software — 4º |
+| DOUGLAS STEFANIE DE SOUZA | 06014318 | Análise e Desenvolvimento de Software — 4º |
+| VINÍCIUS JOSÉ DE ALMEIDA DE FREITAS | 06014004 | Análise e Desenvolvimento de Software — 4º |
 
+---
 
-
-Situação-Problema #3: Circuito Saquarema Verde
+## 🧩 Situação-Problema #3: Circuito Saquarema Verde
 
 A geografia do território municipal de Saquarema é caracterizada pela área costeira, com o turismo do surf, e um ambiente montanhoso que atrai tanto turistas quanto moradores locais. Para fortalecer o ecoturismo na região e promover a conscientização ambiental, é fundamental que os turistas e moradores tenham acesso fácil e rápido às informações sobre as atrações naturais e culturais disponíveis.
 
-O Parque Estadual da Costa do Sol e a Reserva Ecológica Estadual de Jacarepiá são duas áreas de destaque que oferecem trilhas, atividades ao ar livre e oportunidades para a apreciação da fauna e flora locais. No entanto, muitos visitantes ainda enfrentam dificuldades para encontrar informações atualizadas sobre essas atrações, como condições das trilhas, eventos programados e dicas de segurança, bem como as regras de visitação.
-
-Diante desse cenário, a criação de uma plataforma digital, “Saquarema Verde Online”, se torna essencial. O site visa centralizar informações relevantes, facilitar o planejamento de visitas e incentivar a interação entre turistas e a comunidade local. Com um design intuitivo e acessível, a plataforma permitirá que os usuários descubram as belezas naturais de Saquarema, promovendo um turismo sustentável e responsável.
-
-
- 
-
-O Desafio
-O desafio que se apresenta agora é o seguinte: precisamos criar uma solução digital que permita à população acessar informações sobre as atrações turísticas e eventos da cidade de forma eficiente e conveniente. Mais especificamente, nossa meta é desenvolver um website que simplifique o processo de consulta sobre a biodiversidade, trilhas, cachoeiras e eventos promovidos no Circuito Saquarema Verde, com ênfase no Parque Estadual da Costa do Sol e na Reserva Ecológica Estadual de Jacarepiá.
-
- 
-
-Possíveis Atores Envolvidos
-Visitantes:
-
-Usuários em busca de informações sobre ecoturismo.
-
-Administradores:
-
- 
-
-Responsáveis por manter o site atualizado com informações relevantes.
-
-Visitantes:
-
-Usuários em busca de informações sobre ecoturismo.
-
-Administradores:
-
- 
-
-Responsáveis por manter o site atualizado com informações relevantes.
-
-Visitantes:
-
-Usuários em busca de informações sobre ecoturismo.
-
-Administradores:
-
- 
-
-Responsáveis por manter o site atualizado com informações relevantes.
-
-Exigências
-
-Gestão de Disponibilidade:
-
-Os administradores devem ter uma área para configurar a disponibilidade e horários de funcionamento de eventos e temporadas, além de atualizações de novidades.
-
-
-Desempenho Rápido:
-
-O sistema deve responder rapidamente para acomodar um grande número de usuários simultaneamente.
-
-
-Interface Intuitiva:
-
-A interface do usuário deve ser amigável e de fácil utilização, permitindo navegação fluida.
-
-
-Segurança de Dados:
-
-Garantir a segurança e privacidade dos dados pessoais dos administradores.
-
-
-Login para Administradores:
-
-Um botão de login deve ser disponibilizado para que os administradores acessem áreas restritas do site.
-
-Este é um projeto que impactará diretamente a comunidade local e simplificará o acesso às informações dos parques e reservas. Esperamos que vocês possam tirar insights valiosos deste desafio e colaborar para desenvolver uma solução eficaz e eficiente.
-
- 
-
-A Hora da Ação: Contribuindo para um Futuro Sustentável
-
-Cada uma dessas situações-problema representa uma oportunidade única de criar soluções impactantes que não somente resolverão problemas reais, mas também agregarão valor significativo às comunidades e ao meio ambiente.
-
-Em suas mãos, vocês têm a chance de moldar o futuro e criar algo que fará diferença. Essas situações-problema são a base para o desenvolvimento de soluções que podem melhorar a eficiência e a visibilidade das atrações naturais e culturais nas regiões de Teresópolis, Magé e Saquarema. São desafios que exigirão criatividade, inovação e trabalho em equipe.
-
-Lembrem-se de que esta é uma oportunidade única de aplicar seus conhecimentos e habilidades em um contexto do mundo real, contribuindo para o progresso da diversidade, sustentabilidade e ecoturismo no estado do Rio de Janeiro. Seja qual for a situação-problema que vocês escolherem, estejam preparados para um caminho repleto de descobertas, aprendizado e conquistas.
-
-Portanto, escolham com entusiasmo e comprometimento. A partir deste momento, vocês estão no comando da jornada que os levará a desenvolver um MVP Back-End que fará a diferença. Vamos em frente e transformar desafios em oportunidades!   
-
-Cultivando a Mentalidade do MVP
-Em suma, incentivamos vocês a cultivar a mentalidade do MVP. Isso significa abraçar a agilidade, a experimentação, a aprendizagem contínua, a disposição para falhar e aprender com os erros, agir em equipe e serem responsáveis por partes de um todo que, no final, será um sistema funcional. Essa mentalidade é essencial para o sucesso no mundo do desenvolvimento de produtos digitais.
-
-Estamos apenas começando uma jornada emocionante em direção ao domínio do desenvolvimento de Back-End para MVPs. Preparados para desafios empolgantes, aprendizado prático e crescimento profissional? Aventurem-se conosco e preparem-se para uma transformação notável em suas habilidades e perspectivas. Vamos começar!
-
-
-
-
-
-
-
-# 🌿 Saquarema Verde Online  
-Plataforma digital informativa sobre ecoturismo no município de Saquarema – **Situação-Problema: Circuito Saquarema Verde**
-
-## 👥 Integrantes da Equipe
-- DOUGLAS STEFANIE DE SOUZA
-- JOSE CESAR MEDEIROS GOMES
-- VINÍCIUS JOSÉ DE ALMEIDA DE FREITAS
-
-## 🧩 Situação-Problema Escolhida  
-**Situação-Problema #3 – Circuito Saquarema Verde**
-
-A cidade de Saquarema conta com áreas naturais ricas, como o Parque Estadual da Costa do Sol e a Reserva Ecológica Estadual de Jacarepiá. Porém, existe dificuldade no acesso a informações atualizadas sobre trilhas, eventos, biodiversidade e regras de visitação. A solução proposta visa centralizar e disponibilizar essas informações por meio de um website acessível e intuitivo.
-
-## 🚀 Descrição do MVP  
-
-O MVP consiste em um website informativo chamado **Saquarema Verde Online**, desenvolvido utilizando **HTML, CSS e JavaScript**.
-
-### Funcionalidades:
-- Interface intuitiva e responsiva  
-- Informações sobre atrações naturais  
-- Sessão de eventos e atualizações  
-- Login para administradores (Login: admin / senha: admin)
-- Dicas e conteúdos educativos  
-
-## 🖥️ Como Executar o Projeto Localmente  
-
-1. Clone ou baixe o repositório:
-git clone https://github.com/adsmvpsaquarema-hash/ADS_MVP_Circuito_Saquarema_Verde
-
-markdown
-Sempre exibir os detalhes
-
-Copiar código
-2. Abra no VS Code  
-3. Adicione a Extensão
-4. Execute o arquivo `CircuitoSaquaremaVerde.html` com Live Server ou diretamente no navegador.
-
-## 🔐 Área do Administrador
-- Permite cadastrar eventos
-- Gerenciar disponibilidade
-- Editar informações
-- Autenticação básica (MVP)
-
-## ⚙️ Exigências Atendidas
-- Gestão de disponibilidade  
-- Interface intuitiva  
-- Resposta rápida  
-- Segurança básica  
-- Login de administrador  
-- Conteúdo centralizado  
-
-
-## 🌱 Objetivo Geral
-Promover o ecoturismo sustentável em Saquarema e facilitar o acesso às informações das áreas naturais.
-"""
+O **Parque Estadual da Costa do Sol** e a **Reserva Ecológica Estadual de Jacarepiá** são duas áreas de destaque que oferecem trilhas, atividades ao ar livre e oportunidades para a apreciação da fauna e flora locais. No entanto, muitos visitantes ainda enfrentam dificuldades para encontrar informações atualizadas sobre essas atrações, como condições das trilhas, eventos programados, dicas de segurança e regras de visitação.
+
+Diante desse cenário, a plataforma **Saquarema Verde Online** centraliza informações relevantes, facilita o planejamento de visitas e incentiva a interação entre turistas e a comunidade local.
+
+---
+
+## 🏗️ Arquitetura e Estrutura do Projeto
+
+O sistema unifica o **Back-End** (Node.js + Express + SQLite via `better-sqlite3`) e o **Front-End** modular (HTML5, CSS3 e ES Modules nativos, sem etapa de build), servidos pela mesma aplicação:
+
+```
+├── data/                        # Banco SQLite (saquarema.db)
+├── docs/
+│   └── requisitos-backend.md    # Especificação de Requisitos Funcionais e Não-Funcionais
+├── public/                      # Front-End modular servido pelo Express
+│   ├── index.html               # Página inicial: Últimas Notícias, Próximos Eventos e Atrações
+│   ├── biodiversidade.html      # Trilhas, Cachoeiras, Mirantes, Fauna e Flora com filtros
+│   ├── eventos.html             # Programação de eventos da cidade
+│   ├── gastronomia.html         # Restaurantes e estabelecimentos locais
+│   ├── comunidade.html          # Relatos de experiências de visitantes
+│   ├── atracao.html             # Detalhe de atração com subdivisões (Biodiversidade + Eventos)
+│   ├── login.html               # Autenticação de usuários e administradores
+│   ├── admin.html               # Painel de controle com CRUD completo e upload de imagens
+│   ├── usuarios.html            # Gestão de usuários, níveis de acesso e permissões por módulo
+│   ├── assets/                  # Logos e imagens iniciais do seed
+│   ├── css/                     # Estilos modulares (base, layout, componentes, páginas)
+│   └── js/                      # Módulos ES (api, ui, validacao, formulario, layout, páginas)
+├── src/                         # Código-fonte do Back-End
+│   ├── app.js                   # Configuração Express, Helmet, Compression, CORS e rotas
+│   ├── server.js                # Inicialização do servidor e seed automático
+│   ├── config/                  # Variáveis de ambiente e configurações
+│   ├── controllers/             # Controladores REST (atrações, biodiversidade, eventos, usuários, etc.)
+│   ├── database/                # Conexão SQLite, migração automática e seed inicial
+│   ├── middlewares/             # Autenticação JWT, verificação de permissões (RBAC), rate limiting e erros
+│   ├── routes/                  # Definição de rotas da API (/api/*)
+│   └── utils/                   # Validações, matriz de permissões (RBAC) e serialização
+└── test/                        # Testes automatizados (node:test)
+    ├── api.test.js              # Testes de integração de todos os endpoints
+    └── migracao.test.js         # Teste de migração idempotente de bancos legados
+```
+
+---
+
+## 🚀 Funcionalidades Principais
+
+1. **Página Inicial de Notícias (`/`)**: exibe a notícia mais recente em destaque e o mural de novidades (todas com imagem obrigatória), acompanhada da barra lateral de **Próximos Eventos** e dos cartões de **Atrações**.
+2. **Atrações Subdivididas (`/atracao?id=`)**: cada atração (como o Parque Estadual da Costa do Sol e a Reserva de Jacarepiá) concentra suas regras de visitação, condição de funcionamento e horários, subdividindo-se em seus itens de **Biodiversidade** e **Eventos**.
+3. **Biodiversidade (`/biodiversidade`)**: evolução do antigo módulo de trilhas para contemplar *Trilha, Cachoeira, Mirante, Fauna, Flora e Outro*, informando distância, duração, dificuldade, condição (*Aberta, Manutenção, Fechada*), se é gratuito, se é permanente ou temporário, recomendações e dicas de segurança.
+4. **Eventos (`/eventos`)**: listagem dos próximos eventos de Saquarema com suporte a período de início/fim, horário de funcionamento, local, gratuidade, link externo e imagem armazenada no banco.
+5. **Gastronomia (`/gastronomia`)**: catálogo de restaurantes e estabelecimentos locais com endereço, horário de funcionamento, telefone e foto.
+6. **Comunidade (`/comunidade`)**: espaço aberto para visitantes enviarem relatos de suas experiências (vinculados a uma atração e, opcionalmente, a um item de biodiversidade), com proteção anti-spam (rate limit) e moderação pelo administrador.
+7. **Imagens no Banco de Dados (`/api/imagens`)**: upload binário validado por *magic bytes* (`image/jpeg`, `image/png`, `image/webp` até 2 MB) armazenado como `BLOB` no SQLite e servido com cache imutável.
+8. **Painel de Controle (`/admin`)**: CRUD completo para Notícias, Biodiversidade, Eventos, Atrações, Gastronomia e moderação de Relatos, com validação visual em tempo real e pré-visualização de imagens.
+9. **Gestão de Usuários e Permissões — RBAC (`/usuarios`)**: cadastro e edição de usuários com níveis de acesso (**Administrador**, **Gestor**, **Colaborador** e **Personalizado**) e matriz de permissões granular por módulo (**Ler**, **Cadastrar**, **Editar** e **Excluir**).
+
+---
+
+## 🔌 Endpoints da API REST (`/api`)
+
+| Método | Rota | Acesso | Descrição |
+|--------|------|--------|-----------|
+| `GET` | `/api/saude` | Público | Verificação de saúde da API |
+| `POST` | `/api/auth/login` | Público | Autenticação de usuário/administrador (retorna JWT + permissões) |
+| `GET` | `/api/auth/eu` | Autenticado | Retorna os dados, nível e matriz de permissões do usuário logado |
+| `GET` | `/api/usuarios` | Permissão `usuarios` | Lista usuários cadastrados e perfis padrão de permissão |
+| `GET` | `/api/usuarios/:id` | Permissão `usuarios` | Detalha um usuário |
+| `POST / PUT / DELETE` | `/api/usuarios(/:id)` | Permissão `usuarios` | Cria, atualiza nível/permissões ou remove usuário |
+| `GET` | `/api/imagens/:id` | Público | Retorna o binário da imagem armazenada no banco |
+| `POST` | `/api/imagens` | Permissão de escrita | Envia imagem (`jpeg`/`png`/`webp`, máx. 2 MB) |
+| `DELETE` | `/api/imagens/:id` | Permissão de escrita | Remove uma imagem |
+| `GET` | `/api/noticias` | Público | Lista notícias paginadas (com `imagem_url`) |
+| `GET` | `/api/noticias/:id` | Público | Detalha uma notícia |
+| `POST / PUT / DELETE` | `/api/noticias(/:id)` | Permissão `noticias` | Publica (exige `imagem_id`), edita ou exclui notícia |
+| `GET` | `/api/atracoes` | Público | Lista atrações (filtro `?q=`) |
+| `GET` | `/api/atracoes/:id` | Público | Detalha atração com `biodiversidade[]`, `eventos[]` e `relatos[]` |
+| `POST / PUT / DELETE` | `/api/atracoes(/:id)` | Permissão `atracoes` | Cria, atualiza disponibilidade/horários ou remove atração |
+| `GET` | `/api/biodiversidade` | Público | Lista itens com filtros (`?atracao_id=`, `?categoria=`, `?dificuldade=`, `?q=`) |
+| `GET` | `/api/biodiversidade/:id` | Público | Detalha item de biodiversidade |
+| `POST / PUT / DELETE` | `/api/biodiversidade(/:id)` | Permissão `biodiversidade` | CRUD completo de biodiversidade |
+| `GET` | `/api/eventos` | Público | Lista próximos eventos (`?todos=1` inclui encerrados, `?atracao_id=`) |
+| `GET` | `/api/eventos/:id` | Público | Detalha um evento |
+| `POST / PUT / DELETE` | `/api/eventos(/:id)` | Permissão `eventos` | CRUD completo de eventos |
+| `GET` | `/api/gastronomia` | Público | Lista estabelecimentos gastronômicos |
+| `GET` | `/api/gastronomia/:id` | Público | Detalha estabelecimento |
+| `POST / PUT / DELETE` | `/api/gastronomia(/:id)` | Permissão `gastronomia` | CRUD completo de gastronomia |
+| `GET` | `/api/relatos` | Público | Lista relatos da comunidade (`?atracao_id=`, `?biodiversidade_id=`) |
+| `POST` | `/api/relatos` | Público | Publica novo relato (com rate limit) |
+| `DELETE` | `/api/relatos/:id` | Permissão `relatos` | Remove relato (moderação) |
+
+---
+
+## 🖥️ Como Executar o Projeto Localmente
+
+### Pré-requisitos
+- **Node.js 20.x** (veja `.nvmrc`)
+
+### Passo a passo
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. (Opcional) Popule ou atualize o banco de dados manualmente:
+   ```bash
+   npm run seed
+   ```
+3. Inicie o servidor:
+   ```bash
+   npm start
+   ```
+4. Acesse no navegador:
+   - **Site público**: `http://localhost:3000`
+   - **Painel administrativo**: `http://localhost:3000/login`
+     - **Usuário / E-mail**: `admin@saquaremaverde.local` (ou `admin`)
+     - **Senha padrão**: `Admin@123`
+
+### Executar os testes automatizados
+```bash
+npm test
+```

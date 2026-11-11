@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Usuários - Saquarema Verde Online</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/componentes.css">
+    <link rel="stylesheet" href="/css/paginas.css">
+    <script type="module" src="/js/paginas/usuarios.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="logo" href="/" aria-label="Ver o site"><img src="/assets/logo4.png" alt="Logo Circuito Verde Saquarema"></a>
+            <div class="admin-barra-centro">
+                <strong class="admin-titulo">Painel de Controle</strong>
+                <span id="usuario-nome" class="admin-usuario-badge"></span>
+            </div>
+            <nav aria-label="Menu do Painel">
+                <ul class="nav-lista">
+                    <li><a href="/admin">Painel</a></li>
+                    <li><a href="/usuarios" aria-current="page">Usuários</a></li>
+                    <li><a href="/">Ver site</a></li>
+                    <li><button id="sair" class="nav-link-btn" type="button">Sair</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="pagina-titulo">
+            <h1>Gestão de Usuários e Permissões</h1>
+            <p>Cadastre usuários, defina o nível de acesso e gerencie suas permissões.</p>
+        </section>
+        <section id="painel-usuarios" class="secao"></section>
+    </main>
+    <footer id="site-footer"></footer>
+</body>
+</html>

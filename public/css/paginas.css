@@ -1,0 +1,163 @@
+/* Estilos especificos de pagina. */
+.hero { padding: 2.5rem 0 0.5rem; }
+.hero p { color: var(--texto-suave); font-size: 1.1rem; max-width: 62ch; margin-top: 0.4rem; }
+
+.detalhe-capa { width: 100%; max-height: 380px; object-fit: cover; border-radius: var(--raio); box-shadow: var(--sombra); }
+.detalhe-info { display: grid; gap: 0.8rem; }
+.bloco-regras { background: var(--aviso-fundo); border-left: 5px solid var(--aviso); padding: 0.9rem 1.1rem; border-radius: 10px; color: var(--texto); }
+
+.lateral-eventos { display: grid; gap: 0.8rem; }
+.mini-evento { background: var(--branco); border-radius: 12px; padding: 0.8rem 1rem; border-left: 5px solid var(--verde-escuro); box-shadow: var(--sombra); }
+.mini-evento time { font-size: 0.8rem; font-weight: 700; color: var(--verde); text-transform: uppercase; }
+
+/* Login */
+body.pagina-login { align-items: center; justify-content: center; padding: 1.5rem; }
+.login-caixa { width: min(100%, 420px); background: var(--branco); border-radius: 18px; box-shadow: var(--sombra-alta); padding: 2rem; }
+.login-caixa .logo { display: flex; justify-content: center; margin-bottom: 1rem; }
+.login-caixa .logo img { height: 63px; }
+.login-caixa h1 { font-size: 1.35rem; text-align: center; margin-bottom: 1.2rem; }
+
+/* Cabecalho padronizado do Painel de Controle e Pagina de Usuarios (igual ao index) */
+.admin-titulo {
+  font-size: calc(1rem + 3px);
+  font-weight: 700;
+  color: var(--verde-escuro);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+.admin-barra-centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.admin-usuario-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+  line-height: 1;
+  padding: 0.5rem 0.65rem;
+}
+.nav-lista button.nav-link-btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  background: var(--verde);
+  color: var(--branco);
+  border: 1px solid var(--verde);
+  margin-left: 0.35rem;
+  transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.4;
+}
+.nav-lista button.nav-link-btn:hover { background: var(--verde-escuro); border-color: var(--verde-escuro); }
+
+/* Abas e Layout do Painel de Controle */
+.abas { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 1.5rem 0 1rem; }
+.abas button {
+  font: inherit; font-weight: 600; cursor: pointer; padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid var(--verde);
+  background: var(--branco); color: var(--verde-escuro);
+}
+.abas button[aria-selected="true"] { background: var(--verde-escuro); color: var(--branco); border-color: var(--verde-escuro); }
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 1.5rem;
+  align-items: start;
+  width: 100%;
+}
+.admin-layout > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.admin-layout-unico {
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (max-width: 960px) { .admin-layout { grid-template-columns: 1fr; } }
+
+.admin-lista {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 100%;
+}
+.admin-item {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 0.7rem 0.85rem;
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.admin-item img { width: 56px; height: 44px; object-fit: cover; border-radius: 8px; flex: none; background: var(--verde-fundo); }
+.admin-item .info { flex: 1 1 0%; min-width: 0; overflow: hidden; }
+.admin-item .info strong,
+.admin-item .info span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.admin-item .info span { font-size: 0.82rem; color: var(--texto-suave); }
+.admin-item .selo { flex-shrink: 0; }
+.admin-item .acoes { display: flex; gap: 0.35rem; flex-shrink: 0; }
+
+.painel-form[hidden], .aba-painel[hidden] { display: none; }
+.dialogo-confirma::backdrop { background: rgba(0, 0, 0, 0.45); }
+.dialogo-confirma { border: none; border-radius: 14px; padding: 1.5rem; max-width: 360px; box-shadow: var(--sombra-alta); }
+.dialogo-confirma .acoes { display: flex; gap: 0.6rem; justify-content: flex-end; margin-top: 1rem; }
+
+/* Matriz de Permissoes por Modulo (Gestao de Usuarios) */
+.permissoes-bloco {
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: var(--creme);
+  overflow-x: auto;
+}
+.permissoes-bloco legend {
+  font-weight: 700;
+  color: var(--verde-escuro);
+  padding: 0 0.4rem;
+  font-size: 0.95rem;
+}
+.tabela-permissoes {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+.tabela-permissoes th,
+.tabela-permissoes td {
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid var(--borda);
+  text-align: center;
+}
+.tabela-permissoes th:first-child,
+.tabela-permissoes td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
+.tabela-permissoes tr:last-child td { border-bottom: none; }
+.tabela-permissoes input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--verde-escuro);
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+/* Tokens de design e base. Identidade: verdes de Saquarema (paleta original preservada). */
+:root {
+  --verde-escuro: #216d52;
+  --verde: #628474;
+  --verde-claro: #93bdb3;
+  --verde-fundo: #e8f1ee;
+  --creme: #f3f4ed;
+  --branco: #ffffff;
+  --texto: #2b3a34;
+  --texto-suave: #5d7268;
+  --borda: #dbe6e1;
+  --erro: #b3261e;
+  --erro-fundo: #fdecea;
+  --ok: #1e6b3a;
+  --ok-fundo: #e3f4e8;
+  --aviso: #8a5a00;
+  --aviso-fundo: #fff4d6;
+  --raio: 14px;
+  --sombra: 0 2px 10px rgba(33, 109, 82, 0.1);
+  --sombra-alta: 0 10px 24px rgba(33, 109, 82, 0.18);
+  --largura: 1140px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(180deg, var(--verde-claro) 0, var(--verde-fundo) 360px) no-repeat, var(--verde-fundo);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--verde-escuro); }
+
+h1, h2, h3 { line-height: 1.25; color: var(--verde-escuro); }
+
+h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+h3 { font-size: 1.15rem; }
+
+:focus-visible { outline: 3px solid var(--verde-escuro); outline-offset: 2px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

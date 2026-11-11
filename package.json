@@ -1,0 +1,34 @@
+{
+  "name": "saquarema-verde-backend",
+  "version": "1.0.0",
+  "description": "API REST do MVP Saquarema Verde Online - gestao de atracoes, eventos e relatos",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/database/seed.js",
+    "test": "node --test test/"
+  },
+  "keywords": [
+    "mvp",
+    "api",
+    "rest",
+    "ecoturismo",
+    "saquarema"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20 <21"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.3.0",
+    "compression": "^1.8.2",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "allowScripts": {
+    "better-sqlite3@11.10.0": true
+  }
+}

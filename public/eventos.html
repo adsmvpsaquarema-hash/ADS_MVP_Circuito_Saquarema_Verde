@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Saquarema Verde Online</title>
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/componentes.css">
+    <link rel="stylesheet" href="/css/paginas.css">
+    <script type="module" src="/js/paginas/eventos.js"></script>
+</head>
+<body>
+    <header id="site-header"></header>
+    <main class="container">        <section class="pagina-titulo">
+            <h1>Próximos eventos</h1>
+            <p>Programação de eventos de Saquarema, com datas, horários, local e se a entrada é gratuita.</p>
+        </section>
+        <form id="filtros" class="filtros">
+            <div class="campo"><label for="f-atracao">Atração</label><select id="f-atracao"><option value="">Todas</option></select></div>
+            <div class="campo campo-check"><input id="f-todos" type="checkbox"><label for="f-todos">Incluir eventos encerrados</label></div>
+        </form>
+        <div id="lista" class="grade" aria-live="polite"></div>
+        <div id="paginacao" class="paginacao"></div>    </main>
+    <footer id="site-footer"></footer>
+</body>
+</html>

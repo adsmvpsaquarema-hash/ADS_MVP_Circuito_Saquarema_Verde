@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - Saquarema Verde Online</title>
+    <meta name="description" content="Notícias, eventos e informações sobre biodiversidade, trilhas e gastronomia de Saquarema.">
+    <link rel="icon" href="/assets/logo4.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/componentes.css">
+    <link rel="stylesheet" href="/css/paginas.css">
+    <script type="module" src="/js/paginas/noticias.js"></script>
+</head>
+<body>
+    <header id="site-header"></header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Saquarema Verde Online</h1>
+            <p>Bem-vindo! Aqui você encontra as novidades, informações sobre biodiversidade, trilhas, gastronomia e eventos da cidade.</p>
+        </section>
+
+        <div class="secao grade-2">
+            <section aria-labelledby="titulo-noticias">
+                <div class="secao-cabecalho"><h2 id="titulo-noticias">Últimas notícias</h2></div>
+                <div id="lista-noticias" class="grade"></div>
+                <div id="paginacao-noticias" class="paginacao"></div>
+            </section>
+
+            <aside aria-labelledby="titulo-proximos">
+                <div class="secao-cabecalho">
+                    <h2 id="titulo-proximos">Próximos eventos</h2>
+                    <a href="/eventos">Ver todos</a>
+                </div>
+                <div id="lista-proximos" class="lateral-eventos"></div>
+            </aside>
+        </div>
+
+        <section class="secao" aria-labelledby="titulo-atracoes">
+            <div class="secao-cabecalho"><h2 id="titulo-atracoes">Atrações</h2></div>
+            <div id="lista-atracoes" class="grade"></div>
+        </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+</body>
+</html>

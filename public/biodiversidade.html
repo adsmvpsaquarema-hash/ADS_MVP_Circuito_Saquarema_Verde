@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodiversidade - Saquarema Verde Online</title>
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/componentes.css">
+    <link rel="stylesheet" href="/css/paginas.css">
+    <script type="module" src="/js/paginas/biodiversidade.js"></script>
+</head>
+<body>
+    <header id="site-header"></header>
+    <main class="container">        <section class="pagina-titulo">
+            <h1>Biodiversidade</h1>
+            <p>Trilhas, cachoeiras, mirantes, fauna e flora das atrações de Saquarema, com informações de funcionamento, gratuidade e segurança.</p>
+        </section>
+        <form id="filtros" class="filtros" role="search">
+            <div class="campo"><label for="f-q">Buscar</label><input id="f-q" type="search" placeholder="Nome, descrição ou local"></div>
+            <div class="campo"><label for="f-categoria">Categoria</label>
+                <select id="f-categoria">
+                    <option value="">Todas</option><option>Trilha</option><option>Cachoeira</option><option>Mirante</option>
+                    <option>Fauna</option><option>Flora</option><option>Outro</option>
+                </select></div>
+            <div class="campo"><label for="f-atracao">Atração</label><select id="f-atracao"><option value="">Todas</option></select></div>
+        </form>
+        <div id="lista" class="grade" aria-live="polite"></div>
+        <div id="paginacao" class="paginacao"></div>    </main>
+    <footer id="site-footer"></footer>
+</body>
+</html>
