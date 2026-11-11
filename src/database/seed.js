@@ -11,6 +11,22 @@ const DIR_ASSETS = path.join(__dirname, "..", "..", "public", "assets");
 
 const MIMES = { ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".webp": "image/webp" };
 const cacheImagens = new Map();
+const ID_INICIAL_IMAGENS = 1000;
+
+// Garante que as imagens do seed usem IDs >= 1001 para nao colidir com cache antigo do navegador (IDs 1..20).
+function prepararSequenciaImagens() {
+  const temImagemAntiga = db.prepare("SELECT 1 FROM imagens WHERE id <= ? LIMIT 1").get(ID_INICIAL_IMAGENS);
+  const seqAtual = db.prepare("SELECT seq FROM sqlite_sequence WHERE name = 'imagens'").get()?.seq || 0;
+  if (temImagemAntiga || seqAtual < ID_INICIAL_IMAGENS) {
+    db.prepare("DELETE FROM imagens WHERE id <= ?").run(ID_INICIAL_IMAGENS);
+    const existeSeq = db.prepare("SELECT 1 FROM sqlite_sequence WHERE name = 'imagens'").get();
+    if (existeSeq) {
+      db.prepare("UPDATE sqlite_sequence SET seq = ? WHERE name = 'imagens' AND seq < ?").run(ID_INICIAL_IMAGENS, ID_INICIAL_IMAGENS);
+    } else {
+      db.prepare("INSERT INTO sqlite_sequence (name, seq) VALUES ('imagens', ?)").run(ID_INICIAL_IMAGENS);
+    }
+  }
+}
 
 // Guarda um arquivo local na tabela imagens (sem duplicar binarios identicos). Retorna o id ou null.
 function imagemDeArquivo(caminho) {
@@ -18,7 +34,8 @@ function imagemDeArquivo(caminho) {
   if (!fs.existsSync(caminho)) return null;
   const dados = fs.readFileSync(caminho);
   const mime = MIMES[path.extname(caminho).toLowerCase()];
-  const existente = db.prepare("SELECT id FROM imagens WHERE mime = ? AND tamanho = ? AND dados = ?").get(mime, dados.length, dados);
+  const existente = db.prepare("SELECT id FROM imagens WHERE id > ? AND mime = ? AND tamanho = ? AND dados = ?")
+    .get(ID_INICIAL_IMAGENS, mime, dados.length, dados);
   if (existente) {
     cacheImagens.set(caminho, Number(existente.id));
     return Number(existente.id);
@@ -37,6 +54,7 @@ function idAtracao(slug) {
 
 function executarSeed() {
   cacheImagens.clear();
+  prepararSequenciaImagens();
 
   const adminExiste = db.prepare("SELECT COUNT(*) AS total FROM administradores").get().total > 0;
   if (!adminExiste) {
@@ -216,10 +234,15 @@ function executarSeed() {
   const inserirNoticia = db.prepare(
     "INSERT INTO noticias (titulo, resumo, conteudo, imagem_id) VALUES (@titulo, @resumo, @conteudo, @imagem_id)"
   );
+  const atualizarNoticiaImg = db.prepare("UPDATE noticias SET imagem_id = ? WHERE titulo = ?");
   novos = 0;
   for (const n of noticias) {
-    if (db.prepare("SELECT 1 FROM noticias WHERE titulo = ?").get(n.titulo)) continue;
-    inserirNoticia.run({ ...n, imagem_id: img(n.imagem) });
+    const imagemId = img(n.imagem);
+    if (db.prepare("SELECT 1 FROM noticias WHERE titulo = ?").get(n.titulo)) {
+      atualizarNoticiaImg.run(imagemId, n.titulo);
+      continue;
+    }
+    inserirNoticia.run({ ...n, imagem_id: imagemId });
     novos += 1;
   }
   if (novos) console.log(`[seed] ${novos} notícias inseridas.`);
