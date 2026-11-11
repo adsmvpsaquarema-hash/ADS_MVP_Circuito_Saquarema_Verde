@@ -13,6 +13,7 @@ function criarApp() {
   const publico = path.join(__dirname, "..", "public");
 
   app.disable("x-powered-by");
+  app.set("trust proxy", 1);
   app.use(helmet({
     contentSecurityPolicy: {
       directives: { ...helmet.contentSecurityPolicy.getDefaultDirectives(), "img-src": ["'self'", "data:", "blob:"] },

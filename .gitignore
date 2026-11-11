@@ -1,17 +1,22 @@
-# Python
-.venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# Dependências Node.js
+node_modules/
+npm-debug.log*
 
-# Django
-backend/db.sqlite3
-backend/.env
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
 
-# VS Code
+# Banco de dados SQLite local e arquivos temporários/backup
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/*.bak
+
+# VS Code / IDEs
 .vscode/
+.idea/
 
-# OS
+# Sistema Operacional
 .DS_Store
 Thumbs.db

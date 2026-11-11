@@ -51,9 +51,14 @@ O sistema unifica o **Back-End** (Node.js + Express + SQLite via `better-sqlite3
 │   ├── middlewares/             # Autenticação JWT, verificação de permissões (RBAC), rate limiting e erros
 │   ├── routes/                  # Definição de rotas da API (/api/*)
 │   └── utils/                   # Validações, matriz de permissões (RBAC) e serialização
-└── test/                        # Testes automatizados (node:test)
-    ├── api.test.js              # Testes de integração de todos os endpoints
-    └── migracao.test.js         # Teste de migração idempotente de bancos legados
+├── test/                        # Testes automatizados (node:test)
+│   ├── api.test.js              # Testes de integração de todos os endpoints
+│   └── migracao.test.js         # Teste de migração idempotente de bancos legados
+├── .dockerignore                # Arquivos ignorados no contexto de build do Docker
+├── .env.example                 # Exemplo de variáveis de ambiente
+├── .nvmrc                       # Versão recomendada do Node.js (20.19.0)
+├── Dockerfile                   # Imagem Docker da aplicação (Node 20 Alpine)
+└── docker-compose.yml           # Orquestração do contêiner e volume persistente do SQLite
 ```
 
 ---
@@ -106,12 +111,52 @@ O sistema unifica o **Back-End** (Node.js + Express + SQLite via `better-sqlite3
 
 ---
 
-## 🖥️ Como Executar o Projeto Localmente
+## 🖥️ Como Executar o Projeto
 
-### Pré-requisitos
+### Variáveis de Ambiente (Opcional)
+As configurações possuem valores padrão para desenvolvimento e podem ser personalizadas via variáveis de ambiente ou arquivo `.env` (baseado no `.env.example`):
+
+| Variável | Padrão | Descrição |
+|----------|--------|-----------|
+| `PORT` / `PORTA` | `3000` | Porta HTTP onde o servidor Express escuta (compatível com `PORT` dinâmico de nuvens como Render) |
+| `DB_PATH` | `data/saquarema.db` | Caminho do arquivo do banco SQLite |
+| `JWT_SECRET` | `saquarema-verde-mvp-secret-2026` | Chave secreta para assinatura dos tokens JWT |
+| `JWT_EXPIRES_IN` | `8h` | Tempo de expiração do token JWT |
+| `ADMIN_SENHA` | `Admin@123` | Senha inicial do administrador criada durante o *seed* |
+| `CORS_ORIGIN` | *(mesma origem)* | Origem externa opcional permitida via CORS |
+
+---
+
+### Opção 1: Execução com Docker / Docker Compose (Recomendado)
+
+#### Pré-requisitos
+- **Docker** e **Docker Compose** instalados.
+
+#### Passo a passo
+1. Construa a imagem e inicie o contêiner em segundo plano:
+   ```bash
+   docker compose up -d --build
+   ```
+   > O banco de dados SQLite (`/app/data/saquarema.db`) é inicializado e populado automaticamente no primeiro início e persistido no volume Docker `saquarema_data`.
+
+2. Acompanhe os logs da aplicação (opcional):
+   ```bash
+   docker compose logs -f app
+   ```
+
+3. Para encerrar os serviços:
+   ```bash
+   docker compose down
+   ```
+
+---
+
+### Opção 2: Execução Local com Node.js
+
+#### Pré-requisitos
 - **Node.js 20.x** (veja `.nvmrc`)
 
-### Passo a passo
+#### Passo a passo
 1. Instale as dependências:
    ```bash
    npm install
@@ -124,13 +169,18 @@ O sistema unifica o **Back-End** (Node.js + Express + SQLite via `better-sqlite3
    ```bash
    npm start
    ```
-4. Acesse no navegador:
-   - **Site público**: `http://localhost:3000`
-   - **Painel administrativo**: `http://localhost:3000/login`
-     - **Usuário / E-mail**: `admin@saquaremaverde.local` (ou `admin`)
-     - **Senha padrão**: `Admin@123`
 
-### Executar os testes automatizados
+---
+
+### 🌐 Acessos Padrão
+Após iniciar a aplicação (via Docker ou Node.js), acesse no navegador:
+- **Site público**: `http://localhost:3000`
+- **Healthcheck da API**: `http://localhost:3000/api/saude`
+- **Painel administrativo**: `http://localhost:3000/login`
+  - **Usuário / E-mail**: `admin@saquaremaverde.local` (ou `admin`)
+  - **Senha padrão**: `Admin@123`
+
+### 🧪 Executar os Testes Automatizados
 ```bash
 npm test
 ```

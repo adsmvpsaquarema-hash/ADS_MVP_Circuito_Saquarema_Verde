@@ -1,0 +1,33 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: saquarema-verde-app
+    restart: unless-stopped
+    environment:
+      PORTA: 3000
+      DB_PATH: /app/data/saquarema.db
+      JWT_SECRET: ${JWT_SECRET:-saquarema-verde-mvp-secret-2026}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-8h}
+      ADMIN_SENHA: ${ADMIN_SENHA:-Admin@123}
+      CORS_ORIGIN: ${CORS_ORIGIN:-}
+    ports:
+      - "${PORTA:-3000}:3000"
+    volumes:
+      - saquarema_data:/app/data
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/api/saude').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  saquarema_data:
