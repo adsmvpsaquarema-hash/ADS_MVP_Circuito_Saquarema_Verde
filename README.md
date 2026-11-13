@@ -1,4 +1,4 @@
-# 🌿 Saquarema Verde Online
+#  Saquarema Verde Online
 
 Plataforma digital informativa sobre ecoturismo, biodiversidade, eventos, gastronomia e experiências da comunidade no município de Saquarema — **Situação-Problema #3: Circuito Saquarema Verde**.
 
@@ -11,7 +11,7 @@ Plataforma digital informativa sobre ecoturismo, biodiversidade, eventos, gastro
 
 ---
 
-## 🧩 Situação-Problema #3: Circuito Saquarema Verde
+##  Situação-Problema #3: Circuito Saquarema Verde
 
 A geografia do território municipal de Saquarema é caracterizada pela área costeira, com o turismo do surf, e um ambiente montanhoso que atrai tanto turistas quanto moradores locais. Para fortalecer o ecoturismo na região e promover a conscientização ambiental, é fundamental que os turistas e moradores tenham acesso fácil e rápido às informações sobre as atrações naturais e culturais disponíveis.
 
@@ -21,7 +21,7 @@ Diante desse cenário, a plataforma **Saquarema Verde Online** centraliza inform
 
 ---
 
-## 🏗️ Arquitetura e Estrutura do Projeto
+##  Arquitetura e Estrutura do Projeto
 
 O sistema unifica o **Back-End** (Node.js + Express + SQLite via `better-sqlite3`) e o **Front-End** modular (HTML5, CSS3 e ES Modules nativos, sem etapa de build), servidos pela mesma aplicação:
 
@@ -63,7 +63,7 @@ O sistema unifica o **Back-End** (Node.js + Express + SQLite via `better-sqlite3
 
 ---
 
-## 🚀 Funcionalidades Principais
+##  Funcionalidades Principais
 
 1. **Página Inicial de Notícias (`/`)**: exibe a notícia mais recente em destaque e o mural de novidades (todas com imagem obrigatória), acompanhada da barra lateral de **Próximos Eventos** e dos cartões de **Atrações**.
 2. **Atrações Subdivididas (`/atracao?id=`)**: cada atração (como o Parque Estadual da Costa do Sol e a Reserva de Jacarepiá) concentra suas regras de visitação, condição de funcionamento e horários, subdividindo-se em seus itens de **Biodiversidade** e **Eventos**.
@@ -77,7 +77,7 @@ O sistema unifica o **Back-End** (Node.js + Express + SQLite via `better-sqlite3
 
 ---
 
-## 🔌 Endpoints da API REST (`/api`)
+##  Endpoints da API REST (`/api`)
 
 | Método | Rota | Acesso | Descrição |
 |--------|------|--------|-----------|
@@ -172,7 +172,7 @@ As configurações possuem valores padrão para desenvolvimento e podem ser pers
 
 ---
 
-### 🌐 Acessos Padrão
+###  Acessos Padrão
 Após iniciar a aplicação (via Docker ou Node.js), acesse no navegador:
 - **Site público**: `http://localhost:3000`
 - **Healthcheck da API**: `http://localhost:3000/api/saude`
@@ -180,7 +180,7 @@ Após iniciar a aplicação (via Docker ou Node.js), acesse no navegador:
   - **Usuário / E-mail**: `admin@saquaremaverde.local` (ou `admin`)
   - **Senha padrão**: `Admin@123`
 
-### 🧪 Executar os Testes Automatizados
+###  Executar os Testes Automatizados
 ```bash
 npm test
 ```
