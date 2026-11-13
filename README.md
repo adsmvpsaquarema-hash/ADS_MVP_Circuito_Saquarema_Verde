@@ -2,7 +2,7 @@
 
 Plataforma digital informativa sobre ecoturismo, biodiversidade, eventos, gastronomia e experiências da comunidade no município de Saquarema — **Situação-Problema #3: Circuito Saquarema Verde**.
 
-## 👥 Integrantes da Equipe
+##  Integrantes da Equipe
 | Nome | Matrícula | Curso/Turma |
 |------|-----------|-------------|
 | JOSE CESAR MEDEIROS GOMES | 06012011 | Análise e Desenvolvimento de Software — 4º |
@@ -111,7 +111,7 @@ O sistema unifica o **Back-End** (Node.js + Express + SQLite via `better-sqlite3
 
 ---
 
-## 🖥️ Como Executar o Projeto
+##  Como Executar o Projeto
 
 ### Variáveis de Ambiente (Opcional)
 As configurações possuem valores padrão para desenvolvimento e podem ser personalizadas via variáveis de ambiente ou arquivo `.env` (baseado no `.env.example`):
